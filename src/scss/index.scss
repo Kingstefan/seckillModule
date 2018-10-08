@@ -1,0 +1,301 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.seckill-module * {
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+* {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+img {
+    display: block;
+    border: none;
+    border: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.seckill-module {
+    padding: 20px 0;
+    width: 100%;
+    background: #f2f2f2;
+    font-family: "Microsoft Yahei", sans-serif;
+
+    .product-wrap {
+        width: 990px;
+        margin: 0 auto;
+    }
+    .title {
+        width: 100%;
+        height: 60px;
+        background-color: #f87f91;
+        line-height: 60px;
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .seckill-date {
+        display: flex;
+        width: 100%;
+        margin: 15px auto 0;
+        height: 60px;
+        background: #fff;
+        border-bottom: 1px solid #a8a8a8;
+
+        .date-item {
+            float: left;
+            flex: 1;
+            height: 60px;
+            line-height: 60px;
+            font-size: 16px;
+            color: #ea333f;
+            text-align: center;
+        }
+
+        .date-item.current {
+            font-weight: bold;
+        }
+    }
+
+    .seckill-countdown {
+        display: none;
+        width: 100%;
+        height: 70px;
+        background: #fff;
+        color: #ea333f;
+        text-align: center;
+
+        ul {
+            width: 100%;
+            height: 70px;
+            display: flex;
+        }
+
+        .countdown-item {
+            float: left;
+            padding-top: 10px;
+            flex: 1;
+            height: 60px;
+            cursor: pointer;
+        }
+
+        .countdown-item.current {
+            background: #d9d9d9;
+        }
+
+        .spieltag-text,
+        .countdown {
+            display: block;
+            height: 25px;
+            line-height: 25px;
+            font-size: 14px;
+        }
+
+        .spieltag-text {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .seckill-countdown.current {
+        display: block;
+    }
+
+    .seckill-products {
+        display: none;
+        padding-top: 10px;
+        overflow: hidden;
+        .discount {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f5252d;
+            font-size: 16px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+        }
+        .product-btn.over {
+            background: #999;
+        }
+    }
+    .seckill-products.current {
+        display: block;
+    }
+    .seckill-products {
+        ul {
+            margin-right: -10px;
+        }
+
+        .product-list {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 240px;
+            height: 390px;
+            background-color: #fff;
+
+            &:last-child {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .goods-link {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            display: block;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+
+            .lazy-product {
+                display: block;
+                margin: 0 auto;
+                max-width: 200px;
+                max-height: 200px;
+                width: auto;
+                height: 200px;
+            }
+            &.seckillover::after {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                content: "seckill-over";
+                margin-left: -60px;
+                margin-top: -60px;
+                width: 120px;
+                height: 120px;
+                background: rgba(0, 0, 0, .6);
+                font-size: 20px;
+                color: #fff;
+                line-height: 120px;
+                text-align: center;
+                border-radius: 50%;
+            }
+        }
+
+        .goods-info {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            width: 220px;
+            overflow: hidden;
+        }
+
+        .product-desc {
+            width: 100%;
+            height: 16px;
+            line-height: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .product-title {
+            margin-top: 8px;
+            width: 100%;
+            height: 32px;
+            line-height: 16px;
+            font-size: 14px;
+            color: #666;
+            overflow: hidden;
+        }
+
+        .product-badge {
+            margin-bottom: 8px;
+            width: 100%;
+            height: 24px;
+            overflow: hidden;
+
+            span {
+                float: left;
+                margin-right: 5px;
+                padding: 3px 6px;
+                border: 1px solid #f5252d;
+                border-radius: 5px;
+                font-size: 12px;
+                color: #f5252d;
+            }
+        }
+
+        .product-price {
+            margin: 14px 0;
+            height: 40px;
+            width: 100%;
+            overflow: hidden;
+            >div {
+                overflow: hidden;
+            }
+        }
+
+        .present-price {
+            float: left;
+            color: #f5262e;
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        .original-price {
+            margin-left: 7px;
+            float: left;
+            font-size: 12px;
+            line-height: 18px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .reference-price {
+            display: block;
+            margin-top: 2px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .product-btn {
+            display: block;
+            width: 100%;
+            height: 32px;
+            background: #f5262e;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 32px;
+        }
+    }
+}
+
+

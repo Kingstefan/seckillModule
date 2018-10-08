@@ -1,0 +1,252 @@
+@function pxTorem($px) {
+    @return $px / 100px * 1rem;
+}
+.seckill-module-m {
+    padding: pxTorem(20px) 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    font-family: "Microsoft Yahei",
+    sans-serif;
+    .product-wrap {
+        width: 100%;
+    }
+    .title {
+        width: 100%;
+        margin: 0 auto;
+        height: pxTorem(80px);
+        background-color: #f31f47;
+        line-height: pxTorem(80px);
+        font-size: pxTorem(32px);
+        color: #fff;
+        text-align: center;
+    }
+
+    .seckill-date {
+        width: 100%;
+        margin: pxTorem(20px) auto 1px;
+        height: pxTorem(80px);
+        background: #fff;
+        color: #ea333f;
+        text-align: center;
+        display: flex;
+
+        .date-item {
+            flex: 1;
+            height: pxTorem(80px);
+            line-height: pxTorem(80px);
+            font-size: pxTorem(24px);
+            color: #ea333f;
+            text-align: center;
+        }
+
+        .date-item.current {
+            font-weight: bold;
+        }
+    }
+
+    .seckill-countdown {
+        display: none;
+        width: 100%;
+        margin: 0 auto;
+        height: pxTorem(90px);
+        background-color: #fff;
+        color: #ea333f;
+        text-align: center;
+
+        ul {
+            display: flex;
+        }
+
+        .countdown-item {
+            flex: 1;
+            padding-top: pxTorem(15px);
+            height: pxTorem(75px);
+        }
+
+        .countdown-item.current {
+            background-color: #d9d9d9;
+        }
+
+        .spieltag-text,
+        .countdown {
+            display: block;
+            height: pxTorem(30px);
+            line-height: pxTorem(30px);
+            font-size: pxTorem(22px);
+        }
+
+        .spieltag-text {
+            font-size: pxTorem(24px);
+        }
+    }
+
+    .seckill-countdown.current {
+        display: block;
+    }
+
+    .seckill-products {
+        display: none;
+        padding-top: pxTorem(20px);
+        padding-bottom: pxTorem(10px);
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+
+        .discount {
+            position: absolute;
+            left: pxTorem(15px);
+            top: pxTorem(15px);
+            width: pxTorem(66px);
+            height: pxTorem(66px);
+            border-radius: 50%;
+            background-color: #eb0933;
+            font-size: pxTorem(24px);
+            line-height: pxTorem(66px);
+            text-align: center;
+            color: #fff;
+        }
+
+        .product-btn.over {
+            background-color: #999;
+        }
+
+        &.current {
+            display: block;
+        }
+    }
+    .seckill-products {
+        .product-list {
+            position: relative;
+            float: left;
+            margin-left: pxTorem(10px);
+            margin-bottom: pxTorem(10px);
+            width: pxTorem(360px);
+            height: pxTorem(600px);
+            background-color: #fff;
+        }
+
+        .goods-link {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: pxTorem(360px);
+            overflow: hidden;
+            &.scekillover::after {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                content: "seckill-over";
+                margin-left: -.75rem;
+                margin-top: -.75rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: rgba(0, 0, 0, .7);
+                font-size: .20rem;
+                color: #fff;
+                line-height: 1.5rem;
+                text-align: center;
+                border-radius: 50%;
+            }
+            .lazy-product {
+                display: block;
+                margin: pxTorem(30px) auto;
+                max-width: pxTorem(300px);
+                max-height: pxTorem(300px);
+                width: auto;
+                height: pxTorem(300px);
+            }
+        }
+
+        .goods-info {
+            position: absolute;
+            left: pxTorem(14px);
+            bottom: pxTorem(20px);
+            width: pxTorem(332px);
+            overflow: hidden;
+        }
+
+        .product-badge {
+            width: 100%;
+            height: pxTorem(34px);
+            margin-bottom: pxTorem(12px);
+            overflow: hidden;
+
+            span {
+                box-sizing: border-box;
+                float: left;
+                height: pxTorem(34px);
+                line-height: pxTorem(30px);
+                margin-right: pxTorem(6px);
+                padding: 0 pxTorem(10px);
+                border: 1px solid #ea0c30;
+                border-radius: pxTorem(10px);
+                font-size: pxTorem(20px);
+                color: #ea0c30;
+            }
+        }
+
+        .product-desc {
+            height: pxTorem(32px);
+            width: 100%;
+            line-height: pxTorem(32px);
+            font-size: pxTorem(28px);
+            font-weight: 700;
+            color: #000;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .product-title {
+            margin-bottom: pxTorem(28px);
+            margin-top: pxTorem(8px);
+            height: pxTorem(52px);
+            line-height: pxTorem(26px);
+            font-size: pxTorem(20px);
+            color: #666;
+            overflow: hidden;
+        }
+
+        .product-price {
+            width: 100%;
+            height: pxTorem(80px);
+            overflow: hidden;
+        }
+
+        .present-price {
+            float: left;
+            color: #f5262e;
+            font-size: pxTorem(28px);
+            line-height: pxTorem(28px);
+        }
+
+        .original-price {
+            margin-left: pxTorem(6px);
+            float: left;
+            font-size: pxTorem(20px);
+            line-height: pxTorem(34px);
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .reference-price {
+            font-size: pxTorem(20px);
+            color: #999;
+        }
+
+        .product-btn {
+            display: block;
+            width: 100%;
+            height: pxTorem(46px);
+            background-color: #f5262e;
+            font-size: pxTorem(20px);
+            color: #fff;
+            line-height: pxTorem(46px);
+            text-align: center;
+        }
+    }
+}
+
+

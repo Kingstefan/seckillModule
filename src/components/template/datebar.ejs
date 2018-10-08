@@ -1,0 +1,12 @@
+
+<% if(data && data.length > 0){ %>
+    <div class="seckill-date">
+        <% data.forEach(function(item, index){ %>
+            <% if(index === 0) { %>
+                <a class="date-item current" href="javascript:void(0)"><%= item %></a>
+            <% }else{ %>
+                <a class="date-item" href="javascript:void(0)"><%= item %></a>
+            <% } %>
+        <% })%>
+    </div>
+<%}%>

@@ -1,0 +1,42 @@
+
+<% if(data && data.length > 0){ %>
+    <% data.forEach(function(item, index){ %>
+         <% if(index === 0) { %>
+            <div class="seckill-countdown current">
+                <ul>
+                     <% item.countdown_text.forEach(function(text, i){ %>
+                        <% if(i === 0) { %>
+                            <li class="countdown-item current">
+                                <span class="spieltag-text"><%= text %></span>
+                                <span class="countdown">敬请期待</span>
+                            </li>
+                        <% }else{ %>
+                            <li class="countdown-item">
+                                <span class="spieltag-text"><%= text %></span>
+                                <span class="countdown">敬请期待</span>
+                            </li>
+                        <% } %>
+                    <% }) %>
+                </ul>
+            </div>
+        <% }else {%>
+            <div class="seckill-countdown">
+                <ul>
+                    <% item.countdown_text.forEach(function(text, i){ %>
+                        <% if(i === 0) { %>
+                            <li class="countdown-item current">
+                                <span class="spieltag-text"><%= text %></span>
+                                <span class="countdown">敬请期待</span>
+                            </li>
+                        <% }else{ %>
+                            <li class="countdown-item">
+                                <span class="spieltag-text"><%= text %></span>
+                                <span class="countdown">敬请期待</span>
+                            </li>
+                        <% } %>
+                    <% }) %>
+                </ul>
+            </div>
+        <% } %>
+    <% })%>
+<%}%>

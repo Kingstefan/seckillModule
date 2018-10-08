@@ -1,0 +1,35 @@
+
+<% if (data.length > 0 && data) { %>
+    <% data.forEach(function(items) { %>
+         <div class="seckill-products">
+            <ul>
+                <% items.forEach(function(item) { %>
+                    <li class="product-list" data-productId="<%= item.product_id %>">
+                        <a href="<%= item.product_url %>" target="_blank" class="goods-link">
+                            <img alt="<%= item.img_title %>" class="lazy-product" data-original="<%= item.img_url %>">
+                        </a>
+                        <div class="goods-info">
+                            <div class="product-badge">
+                                <% item.product_tags.forEach(function(tag) { %>
+                                    <span><%= tag %></span>
+                                <% }) %>
+                            </div>
+                            <div class="product-desc"><%= item.product_desc %></div>
+                            <div class="product-title"><%= item.product_title %></div>
+                            <div class="product-price">
+                                <div>
+                                    <span class="present-price"><%= item.present_price %></span>
+                                    <span class="original-price"><%= item.original_price %></span>
+                                </div>
+                                <span class="reference-price">参考价：<%= item.reference_price %></span>
+                            </div>
+                            <a href="<%= item.product_url %>" target="_blank" class="product-btn">立即购买</a>
+                        </div>
+                        <div class="discount"><%= item.product_dis %></div>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+    <% }) %>
+<% } %>
+
