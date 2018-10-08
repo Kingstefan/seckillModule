@@ -14,7 +14,7 @@ module.exports = merge(BaseWebpackConfig, {
         chunkFilename: 'js/[name].js'
     },
     plugins: [
-        new CleanWebpackPlugin(['./dist'], {
+        new CleanWebpackPlugin(['dist/'], {
             root: __dirname,
             verbose: true,
             dry: false
